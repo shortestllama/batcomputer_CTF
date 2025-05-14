@@ -33,7 +33,11 @@ def login():
 
         if user:
             session["user"] = user[1]
-            return redirect("/home")
+            # If in iframe, render directly
+            if "iframe" in request.args:
+                return render_template("home.html", user=session["user"], flag="gotham{C0mput3r_4n41y5i5}")
+            else:
+                return redirect("/home")
         else:
             error = "Invalid credentials."
 
