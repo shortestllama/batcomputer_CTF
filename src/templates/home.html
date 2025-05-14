@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome, {{ user }}</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00bfff;
+            font-family: monospace;
+            padding: 40px;
+        }
+        h1 {
+            border-bottom: 1px solid #00bfff;
+            padding-bottom: 10px;
+        }
+        .flag-box {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            font-weight: bold;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ user }}</h1>
+    <div class="flag-box">{{ flag }}</div>
+</body>
+</html>
